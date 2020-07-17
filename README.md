@@ -2,14 +2,14 @@
 
 ### Fresh installation
 
-Clone the project `git clone https://github.com/joseluiselp/Chotel_Scrummers_API.git`
-Create a database 
-Execute `composer install`
-Create the `.env` file and set the database connection
-Execute `php artisan key:generate`
-Execute `php artisan migrate`
-Execute `php artisan db:seed`
-Execute `php artisan passport:install`
+- Clone the project `git clone https://github.com/joseluiselp/Chotel_Scrummers_API.git`
+- Create a database 
+- Execute `composer install`
+- Create the `.env` file and set the database connection
+- Execute `php artisan key:generate`
+- Execute `php artisan migrate`
+- Execute `php artisan db:seed`
+- Execute `php artisan passport:install`
 
 
 
@@ -219,29 +219,29 @@ $.ajax(settings).done(function (response) {
 - **Success Response - Code 200**<br>
 ```yaml
 {
-	[
-	    {
-	        "name": "101",
-	        "floor": 1,
-	        "type": {
-	            "name": "Single"
-	        }
-	    },
-	    {
-	        "name": "104",
-	        "floor": 1,
-	        "type": {
-	            "name": "Single"
-	        }
-	    },
-	    {
-	        "name": "105",
-	        "floor": 2,
-	        "type": {
-	            "name": "Single"
-	        }
-	    }
-	]
+[
+    {
+        "name": "101",
+        "floor": 1,
+        "type": {
+            "name": "Single"
+        }
+    },
+    {
+        "name": "104",
+        "floor": 1,
+        "type": {
+            "name": "Single"
+        }
+    },
+    {
+        "name": "105",
+        "floor": 2,
+        "type": {
+            "name": "Single"
+        }
+    }
+]
 }
 
 ```
@@ -263,23 +263,23 @@ $.ajax(settings).done(function (response) {
 
 ```yaml
 var settings = {
-  "url": "api/room/reservation",
-  "method": "POST",
-  "timeout": 0,
-  "headers": {
-    "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9...",
-    "Content-Type": "application/x-www-form-urlencoded"
-  },
-  "data": {
-    "type": "1",
-    "checkin": "2020-07-17",
-    "checkout": "2020-07-18",
-	}
-};
+	"url": "api/room/reservation",
+	"method": "POST",
+	"timeout": 0,
+	"headers": {
+		"Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9...",
+		"Content-Type": "application/x-www-form-urlencoded"
+		},
+		"data": {
+			"type": "1",
+			"checkin": "2020-07-17",
+			"checkout": "2020-07-18",
+		}
+	};
 
-$.ajax(settings).done(function (response) {
-  console.log(response);
-});
+	$.ajax(settings).done(function (response) {
+		console.log(response);
+		});
 
 ```
 - **Success Response - Code 200**<br>
@@ -313,37 +313,37 @@ $.ajax(settings).done(function (response) {
 
 ```yaml
 var settings = {
-  "url": "api/room/reservation",
-  "method": "PUT",
-  "timeout": 0,
-  "headers": {
-    "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9...",
-    "Content-Type": "application/x-www-form-urlencoded"
-  },
-  "data": {
-  	"id": "1",
-    "type": "1",
-    "checkin": "2020-07-17",
-    "checkout": "2020-07-18",
-	}
-};
+	"url": "api/room/reservation",
+	"method": "PUT",
+	"timeout": 0,
+	"headers": {
+		"Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9...",
+		"Content-Type": "application/x-www-form-urlencoded"
+		},
+		"data": {
+			"id": "1",
+			"type": "1",
+			"checkin": "2020-07-17",
+			"checkout": "2020-07-18",
+		}
+	};
 
-$.ajax(settings).done(function (response) {
-  console.log(response);
-});
+	$.ajax(settings).done(function (response) {
+		console.log(response);
+		});
 
 ```
 - **Success Response - Code 200**<br>
 ```yaml
 {
-    "id": 16,
-    "checkin": "2020-07-22",
-    "checkout": "2020-07-25",
-    "deleted": 0,
-    "room": {
-        "name": "101",
-        "floor": 1
-    }
+	"id": 16,
+	"checkin": "2020-07-22",
+	"checkout": "2020-07-25",
+	"deleted": 0,
+	"room": {
+		"name": "101",
+		"floor": 1
+	}
 }
 
 ```
@@ -366,17 +366,17 @@ $.ajax(settings).done(function (response) {
 
 ```yaml
 var settings = {
-  "url": "api/room/reservation",
-  "method": "DELETE",
-  "timeout": 0,
-  "headers": {
-    "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9...",
-    "Content-Type": "application/x-www-form-urlencoded"
-  },
-  "data": {
-  	"id": "1"
-	}
-};
+	"url": "api/room/reservation",
+	"method": "DELETE",
+	"timeout": 0,
+	"headers": {
+		"Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9...",
+		"Content-Type": "application/x-www-form-urlencoded"
+		},
+		"data": {
+			"id": "1"
+		}
+	};
 
 $.ajax(settings).done(function (response) {
   console.log(response);
@@ -386,14 +386,14 @@ $.ajax(settings).done(function (response) {
 - **Success Response - Code 200**<br>
 ```yaml
 {
-    "id": 16,
-    "checkin": "2020-07-22",
-    "checkout": "2020-07-25",
-    "deleted": true,
-    "room": {
-        "name": "101",
-        "floor": 1
-    }
+	"id": 16,
+	"checkin": "2020-07-22",
+	"checkout": "2020-07-25",
+	"deleted": true,
+	"room": {
+		"name": "101",
+		"floor": 1
+	}
 }
 
 ```
