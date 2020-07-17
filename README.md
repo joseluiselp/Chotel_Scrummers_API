@@ -5,13 +5,16 @@
 - Clone the project `git clone https://github.com/joseluiselp/Chotel_Scrummers_API.git`
 - Create a database 
 - Execute `composer install`
-- Create the `.env` file and set the database connection
+- Create the `.env` from .env.example file and set the database connection
 - Execute `php artisan key:generate`
 - Execute `php artisan migrate`
 - Execute `php artisan db:seed`
 - Execute `php artisan passport:install`
+- Execute `php artisan serve`
 
+## If you're running on localhost
 
+Make sure you can make self calls to your running local server, if that's not the case just run another instance with another port and then in `app\Http\Controllers\Api\UserController.php` edit the lines 31 and 56 with your 2nd localhost
 
 ### Methods
 
